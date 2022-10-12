@@ -1,0 +1,169 @@
+<!-- LAB03 -->
+<!-- Deadline: 2022-10-19 23:59 -->
+<!-- Build your personal website -->
+
+<!-- [20%] 1. Contains at least five webpages(e.g., Home, Schedule, Information) -->
+<!-- [10%] (i) On top of each webpage should show a navigation bar. -->
+<!-- [10%] (ii) Navigation bar should be an unordered list and contain the links that direct to each web page respectively. -->
+<!-- [10%] (iii) Mouse move over to one of the navigation item, the background and text color should both change.
+                 The color combination must be one of the color palettes that provided by https://colorhunt.co/
+                 (text color, background color, hover text color & hover background color)
+                 (Show the TA which color palette you choose when you get graded)-->
+
+<!-- 2. On one of your webpages, it should have the structure shown as below. (ref:LAB03.pdf) -->
+<!-- [20%] (i) Two sub-division (2a, 2b) that align horizontally. -->
+<!-- [10%] (ii) The background colors of division 1 should be different from 2a & 2b. -->
+<!-- [10%] (iii) In 2a, there should be one rounded images of youself followed by your name and job title. -->
+<!-- [10%] (iv) In 2b, there should be one unordered list below your biography.
+                The unordered list should contain three list itemsthat showsin three different bullet colors. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*  CSS  */
+
+        strong{
+            font-weight:bold;
+            font-style:italic;
+            text-decoration: underline;
+        }
+        .fst{
+            float:right;
+            width:50%;
+            background-color: #7D6E83;
+        }
+        .scd{
+            float:left;
+            width: 50%;
+            background-color: #5F9DF7;
+        }
+        .thr{
+            float:right;
+            width:50%;
+            background-color: #98A8F8;
+        }
+        .for{
+            float:left;
+            width: 50%;
+            background-color: #FB2576;
+        }
+        body{
+            background-color: #7895B2;
+        }
+        div.content{
+            overflow: auto;
+            border: 3px;
+            resize: both;
+            width: 70%
+        }
+        #you_can_click {
+        }
+        #you_can_click ul {
+            /* 取消ul樣式符號 */
+            list-style-type:none;
+            /* 重設ul邊界與留白為零 */
+            margin:0;
+            padding:0;
+            /* 內有浮動元件時，需設overflow才會自動調整大小 */
+            overflow:auto;
+        }
+        #you_can_click ul li {
+            /* 利用float讓第一層li水平排列 */
+            float:left;
+        }
+        #you_can_click ul li a {
+            /* 將a改為區塊元件，以便指定寬高 */
+            display:block;
+            /* 這邊也要設float，否則IE6會以100%寬度顯示 */
+            float:left;
+            /* 固定高度 */
+            height:30px;
+            width: 150px;
+            text-align: center;
+        }
+        /* ---------- 以下為美化用，非必需 ---------- */
+
+
+        /* 預設字體 */
+        #you_can_click {
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /* 第一層ul背景色彩與邊框 */
+        #you_can_click ul {
+            background:yellowgreen;/*#6f6f6f*/
+        }
+        /* 第一層a字型 */
+        #you_can_click ul li a {
+            color:#FFF;
+            text-decoration:none;
+            line-height: 30px;
+        }
+        /* 觸動第一層li時，改變背景色 */
+        #you_can_click ul li:hover, #you_can_click ul li a:hover {
+            background:aqua;/*#efefef*/
+        }
+        #you_can_click ul li:hover a {/**/
+            color:#333333;
+        }
+
+
+        img {
+          border-radius: 100%;
+        }
+        .myself{
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="you_can_click">
+        <ul>
+          <li> <a href="list.html">list</a></li>
+          <li> <a href="another.html">another_index</a></li>
+          <li> <a href="movie/font.html">font</a></li>
+          <li> <a href="movie/helloworld.html">helloworld</a></li>
+          <li> <a href="movie/dvd/ebook_sherlock.html">ebook_sherlock</a></li>
+        </ul>
+    </div>
+    <!-- Don't forget to submit HTML file to your GitHub repository -->
+    <!-- Write your code here -->
+    <div class="fst">
+        <h3>link</h3>
+        <div class="myself">
+            <ul style="">
+                <li style="color:Red" > <a href="tel:+886902310932">+886 902 310 932</a>
+
+                <li style="color:aqua" > <a href="https://kyynk.github.io/110590034/">lab01</a></li>
+                <li style="color:aqua" > <a href="https://kyynk.github.io/110590034/lab02">lab02</a></li>
+
+                <li style="color:yellow" > <a href="https://www.youtube.com/">youtube</a></li>
+                <li style="color:yellow" > <a href="https://www.twitch.tv/">twitch</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="scd">
+        <abbr title="nice">
+            <a href="https://wall.alphacoders.com/by_sub_category.php?id=320804&name=Arknights+Wallpapers" alt="Avatar" style="width:200px">
+                <img src="1153752.jpg" alt="Avatar" style="width:200px">
+            </a>
+        </abbr>
+        <h1>NAME</h1>
+        <p>
+            my name is <strong>Rong-Chun Yang</strong>.<br />
+        </p>
+        <h1>JOB</h1>
+        <p>
+            my job is student.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

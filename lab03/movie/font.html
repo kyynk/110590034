@@ -1,0 +1,187 @@
+<html lang="en-us">
+    <head>
+        <title>title :)</title>
+        <style>
+            strong{
+                font-weight:bold;
+                font-size:large;
+                font-style:italic;
+            }
+            del{background-color:tomato}
+            ins{background-color:gold}
+
+            .fst{
+                float:right;
+                width:50%;
+                background-color:aqua;
+            }
+            .scd{
+                float:left;
+                width: 50%;
+                background-color:yellowgreen;
+            }
+            .div1{
+                background-color:#EBEBEB;
+            }
+            .div2{
+                background-color:#FF0000;
+            }
+            .div3{
+                background-color:#66EBEB;
+            }
+            div.content{
+                overflow: auto;
+                border: 3px;
+                resize: both;
+                width: 70%
+            }
+            #you_can_click {
+            }
+            #you_can_click ul {
+                /* 取消ul樣式符號 */
+                list-style-type:none;
+                /* 重設ul邊界與留白為零 */
+                margin:0;
+                padding:0;
+                /* 內有浮動元件時，需設overflow才會自動調整大小 */
+                overflow:auto;
+            }
+            #you_can_click ul li {
+                /* 利用float讓第一層li水平排列 */
+                float:left;
+            }
+            #you_can_click ul li a {
+                /* 將a改為區塊元件，以便指定寬高 */
+                display:block;
+                /* 這邊也要設float，否則IE6會以100%寬度顯示 */
+                float:left;
+                /* 固定高度 */
+                height:30px;
+                width: 150px;
+                text-align: center;
+            }
+            /* ---------- 以下為美化用，非必需 ---------- */
+
+
+            /* 預設字體 */
+            #you_can_click {
+                font-size:20px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            /* 第一層ul背景色彩與邊框 */
+            #you_can_click ul {
+                background:yellowgreen;/*#6f6f6f*/
+            }
+            /* 第一層a字型 */
+            #you_can_click ul li a {
+                color:#FFF;
+                text-decoration:none;
+                line-height: 30px;
+            }
+            /* 觸動第一層li時，改變背景色 */
+            #you_can_click ul li:hover, #you_can_click ul li a:hover {
+                background:aqua;/*#efefef*/
+            }
+            #you_can_click ul li:hover a {/**/
+                color:#333333;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="you_can_click">
+            <ul>
+              <li> <a href="../list.html">list</a></li>
+              <li> <a href="../another.html">another_index</a></li>
+              <li> <a href="../lab03.html">lab03</a></li>
+              <li> <a href="helloworld.html">helloworld</a></li>
+              <li> <a href="dvd/ebook_sherlock.html">ebook_sherlock</a></li>
+            </ul>
+        </div>
+        <h1>Just Try</h1>
+        <div id="Section2">
+            <h1>This is Section2</h1>
+        </div>
+
+        <p>
+            This is <b>bold</b><br /><hr />
+            This is <i>italic</i><br />
+            <hr />
+            E=MC<sup>2</sup> and CO<sub>2</sub>
+        </p>
+        <hr />
+        <p><strong>Beware</strong> pickpockets oprate in this area</p>
+        <p>I <em>think</em> Ivy was the first.</p>
+        <h2>normal strong=bold,em=italic</h2>
+        <p>
+            It was <mark><strong>1<sup>st</sup></strong></mark> established
+            during the Japanese Colonial Period as the Auxiliary Industrial
+            Institute of the Education Affairs Office of the Civil
+            Administration Department.<br />
+        </p>
+
+        <hr />
+        <h1>link</h1>
+        <p>
+            not link:<br /><abbr title="profession">pro</abbr> player<br><br />
+            is link:<br />
+            <a href="https://google.com">
+                google
+            </a>
+            <br />
+            <a href="https://kyynk.github.io/110590034/">
+                https://kyynk.github.io/110590034/
+            </a>
+            <br />
+            <a href="mailto:kyynk123@gmail.com">
+                send email
+            </a>
+            <br />
+            <a href="#Section2" >
+                Go to Section2
+            </a>
+            <br />
+            <a href="tel:+886902310932">
+                +886 902 310 932
+            </a>
+        </p>
+
+        <p>
+            It was the <del>worst</del><ins>best</ins> idea she had ever had.
+        </p>
+        <div class="fst">
+            <p>
+                This is some paragraph inside div tag.
+            </p>
+            <ul>
+                <li>
+                    List item1
+                </li>
+                <li>
+                    List item2
+                </li>
+            </ul>
+        </div>
+        <div class="scd">
+            <p>
+                This is some paragraph inside div tag.
+            </p>
+            <ol>
+                <li>
+                    List item1
+                </li>
+                <li>
+                    List item2
+                </li>
+            </ol>
+        </div>
+        <div class="div1">
+            aaaaa
+        </div>
+        <div class="div2">
+            bbbbb
+        </div>
+        <div class="div3">
+            ccccc
+        </div>
+    </body>
+</html>

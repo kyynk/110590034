@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>list :)</title>
+        <style>
+        #you_can_click {
+        }
+        #you_can_click ul {
+            /* 取消ul樣式符號 */
+            list-style-type:none;
+            /* 重設ul邊界與留白為零 */
+            margin:0;
+            padding:0;
+            /* 內有浮動元件時，需設overflow才會自動調整大小 */
+            overflow:auto;
+        }
+        #you_can_click ul li {
+            /* 利用float讓第一層li水平排列 */
+            float:left;
+        }
+        #you_can_click ul li a {
+            /* 將a改為區塊元件，以便指定寬高 */
+            display:block;
+            /* 這邊也要設float，否則IE6會以100%寬度顯示 */
+            float:left;
+            /* 固定高度 */
+            height:30px;
+            width: 150px;
+            text-align: center;
+        }
+        /* ---------- 以下為美化用，非必需 ---------- */
+
+
+        /* 預設字體 */
+        #you_can_click {
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /* 第一層ul背景色彩與邊框 */
+        #you_can_click ul {
+            background:yellowgreen;/*#6f6f6f*/
+        }
+        /* 第一層a字型 */
+        #you_can_click ul li a {
+            color:#FFF;
+            text-decoration:none;
+            line-height: 30px;
+        }
+        /* 觸動第一層li時，改變背景色 */
+        #you_can_click ul li:hover, #you_can_click ul li a:hover {
+            background:aqua;/*#efefef*/
+        }
+        #you_can_click ul li:hover a {/**/
+            color:#333333;
+        }
+            #menu {
+                /* 選單大小 */
+                width:600px;
+                height:30px;
+            }
+            #menu ul {
+                /* 取消ul樣式符號 */
+                list-style-type:none;
+                /* 重設ul邊界與留白為零 */
+                margin:0;
+                padding:0;
+                /* 內有浮動元件時，需設overflow才會自動調整大小 */
+                overflow:auto;
+            }
+            * html #menu ul {
+                /* 解決IE6不理overflow問題，直接指定高度 */
+                height:30px;
+            }
+            #menu ul li {
+                /* 利用float讓第一層li水平排列 */
+                float:left;
+            }
+            /* 解決IE6條列式餘白問題*/
+            * html #menu ul li {
+                display:inline;
+            }
+            #menu ul li a {
+                /* 將a改為區塊元件，以便指定寬高 */
+                display:block;
+                /* 這邊也要設float，否則IE6會以100%寬度顯示 */
+                float:left;
+                /* 固定高度 */
+                height:30px;
+                width: 100px;
+                text-align: center;
+            }
+            #menu ul li ul {
+                /* 讓第二層ul跳脫文件流以利定位 */
+                position:absolute;
+                /* 固定寬度 */
+                width:100px;
+                /* 避免出現捲軸 */
+                overflow:visible;
+                /* 讓ul與母階層li相同位置 */
+                clear:left;
+                margin-top: 30px;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+            /* 修正IE7絕對定位差異 */
+            *:first-child+html #menu ul li ul {
+                margin-top:0;
+            }
+            /* 修正IE6絕對定位差異 */
+            * html #menu ul li ul {
+                margin-top:0;
+            }
+            #menu ul li ul li {
+                /* 覆寫繼承自第一層的浮動設定 */
+                float:none;
+                text-align: center;
+            }
+            #menu ul li ul li a {
+                /* 覆寫繼承自第一層的浮動設定 */
+                float:none;
+                width: 100%;/* 註：display、height、padding繼承第一層的設定 */
+            }
+            #menu ul li ul li ul {
+                margin-top: -30px;
+                margin-right: 0;
+                margin-bottom: 0;
+                margin-left: 100px;
+                width: 100%;
+            }
+            /* 修正IE7絕對定位差異 */
+            *:first-child+html #menu ul li ul li ul {
+                margin-top:-30px;
+            }
+            #menu ul li ul li ul li {
+                /* width、float繼承第二層，免設定 */
+            }
+            #menu ul li ul li ul li a {
+                /* width、float繼承第二層，免設定 */
+            }
+            /* ---------- 隱藏與顯示階層 ---------- */
+            #menu ul li ul {
+                /* 預先隱藏第二層 */
+                visibility:hidden;
+            }
+            #menu ul li:hover ul {
+                /* 觸動第一層時，顯示第二層 */
+                visibility:visible;
+            }
+            #menu ul li:hover ul li ul {
+                /* 顯示第二層時，隱藏第三層，避免同時彈出 */
+                visibility:hidden;
+            }
+            #menu ul li ul li:hover ul {
+                /* 觸動第二層時，顯示第三層 */
+                visibility:visible;
+            }
+            #menu ul li ul li:hover ul li ul {
+            /* 顯示第三層時，隱藏第四層，避免同時彈出 */
+                visibility:hidden;
+            }
+            #menu ul li ul li ul li:hover ul {
+                /* 觸動第三層時，顯示第四層 */
+                visibility:visible;
+            }
+            /* ---------- 以下為美化用，非必需 ---------- */
+
+
+            /* 預設字體 */
+            #menu {
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            /* 第一層ul背景色彩與邊框 */
+            #menu ul {
+                background:green;/*#6f6f6f*/
+            }
+            /* 第一層a字型 */
+            #menu ul li a {
+                color:#FFF;
+                text-decoration:none;
+                line-height: 30px;
+            }
+            /*第二層ul背景色彩與邊框  */
+            #menu ul li ul {
+                background:yellow;/*#efefef*/
+            }
+            /* 第二層a字型 */
+            #menu ul li ul li a {
+                font-size:12px;
+                color:#333333;
+                text-decoration:none;
+            }
+            /* 觸動第一層li時，改變背景色 */
+            #menu ul li:hover, #menu ul li a:hover {
+                background:aqua;/*#efefef*/
+            }
+            #menu ul li:hover a {/**/
+                color:#333333;
+            }
+            /* 觸動第二層以上li時改變背景色 */
+            #menu ul li ul li:hover, #menu ul li ul li a:hover {
+                background:#dfdfdf;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="you_can_click">
+            <ul>
+              <li> <a href="lab03.html">lab03</a></li>
+              <li> <a href="another.html">another_index</a></li>
+              <li> <a href="movie/font.html">font</a></li>
+              <li> <a href="movie/helloworld.html">helloworld</a></li>
+              <li> <a href="movie/dvd/ebook_sherlock.html">ebook_sherlock</a></li>
+            </ul>
+        </div>
+        <div id="menu">
+            <ul>
+              <li> <a href="#">Fruits</a>
+                <ul>
+                  <li><a href="#">Apple</a></li>
+                  <li><a href="#">Banana</a></li>
+                  <li><a href="#">Cherry</a></li>
+                  <li><a href="#">Orange</a></li>
+                </ul>
+              </li>
+              <li> <a href="#Vegetables">Vegetables</a>
+                <ul>
+                  <li><a href="#Broccoli">Broccoli</a></li>
+                  <li><a href="#Cabbage">Cabbage</a></li>
+                  <li><a href="#Peas">Peas</a></li>
+                  <li><a href="#Onion">Onion</a></li>
+                </ul>
+              </li>
+              <li> <a href="#Meats">Meats</a>
+                <ul>
+                  <li> <a href="#White_Meat">White Meat</a>
+                    <ul>
+                      <li><a href="#Chicken">Chicken</a></li>
+                      <li><a href="#Duck">Duck</a></li>
+                      <li><a href="#Fish">Fish</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#Red_Meat">Red Meat</a>
+                    <ul>
+                      <li><a href="#Beef">Beef</a></li>
+                      <li><a href="#">Pork</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div
+        <div id="menub">
+            <ul>
+              <li> <a href="#">Fruits</a>
+                <ul>
+                  <li><a href="#">Apple</a></li>
+                  <li><a href="#">Banana</a></li>
+                  <li><a href="#">Cherry</a></li>
+                  <li><a href="#">Orange</a></li>
+                </ul>
+              </li>
+              <li><a>Vegetables</a>
+                <ul>
+                  <li><a href="#Broccoli">Broccoli</a></li>
+                  <li><a href="#Cabbage">Cabbage</a></li>
+                  <li><a href="#Peas">Peas</a></li>
+                  <li><a href="#Onion">Onion</a></li>
+                </ul>
+              </li>
+              <li> <a href="#Meats">Meats</a>
+                <ul>
+                  <li> <a href="#White_Meat">White Meat</a>
+                    <ul>
+                      <li><a href="#Chicken">Chicken</a></li>
+                      <li><a href="#Duck">Duck</a></li>
+                      <li><a href="#Fish">Fish</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#Red_Meat">Red Meat</a>
+                    <ul>
+                      <li><a href="#Beef">Beef</a></li>
+                      <li><a href="#Pork">Pork</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
+
+
+        <ol>
+            <li>A1</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol type="1">
+            <li>A2</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol start="50">
+            <li>Coffee3</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+        <ol type="a">
+            <li>A4</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol type="A">
+            <li>A5</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol type="i">
+            <li>A6</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol type="I">
+            <li>A7</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <ol>
+            <ol style="list-style-type:upper-roman">
+                <li>Coffee8</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+            <ol style="list-style-type:lower-alpha">
+                <li>Coffee9</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+            <ol style="line-height:80%">
+                <li>Coffee10</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+            <ol style="line-height:180%">
+                <li>Coffee11</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+        </ol>
+
+
+        <ul style="list-style-type:circle">
+            <li>Coffee12</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ul style="list-style-type:disc">
+            <li>Coffee13</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ul style="list-style-type:square">
+            <li>Coffee14</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+        <ul>
+            <ul style="line-height:180%">
+                <li>Coffee15</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+            <ul style="line-height:80%">
+                <li>Coffee16</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+        </ul>
+
+    </body>
+</html>
