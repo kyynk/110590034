@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*  CSS  */
+
+        strong{
+            font-weight:bold;
+            font-style:italic;
+            text-decoration: underline;
+        }
+        .fst{
+            float:right;
+            width:50%;
+            background-color: #7895B2;
+            /*background-color: #7D6E83;*/
+        }
+        .scd{
+            float:left;
+            width: 50%;
+            background-color: #7895B2;
+            /*background-color: #5F9DF7;*/
+        }
+
+        body{
+            background-color: #7895B2;
+        }
+        div.content{
+            overflow: auto;
+            border: 3px;
+            resize: both;
+            width: 70%
+        }
+        * {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  /*background: rgb(0, 0, 0);*/
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  height:15%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+    </style>
+</head>
+
+<body>
+    <div class="scd">
+        <img src="https://static.wikia.nocookie.net/sexypedia/images/c/ce/Sus.png/revision/latest/top-crop/width/360/height/360?cb=20210326191942" alt="" style="width:200px">
+        <br />
+        Origin image
+    </div>
+    <div class="fst">
+        <div class="container">
+          <img src="https://static.wikia.nocookie.net/sexypedia/images/c/ce/Sus.png/revision/latest/top-crop/width/360/height/360?cb=20210326191942" alt="" style="width:200px" class="image">
+          <div class="overlay">My Name is 楊榮鈞</div>
+        </div>
+        Mouse hover over
+    </div>
+
+
+    <br />
+
+    <h3>image map</h3>
+    <img src="https://static.wikia.nocookie.net/sexypedia/images/c/ce/Sus.png/revision/latest/top-crop/width/360/height/360?cb=20210326191942" alt="" style="width:200px" usemap="#workmap">
+    <p>
+        click that go to https://kyynk.github.io/110590034/lab02 !
+    </p>
+    <map name="workmap">
+      <area shape="rect" coords="60, 50, 160, 80" href="https://kyynk.github.io/110590034/lab02">
+    </map>
+    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="" style="width:200px" usemap="#wmap">
+    <p>
+        click that go to https://kyynk.github.io/110590034/lab02 !
+    </p>
+    <map name="wmap">
+      <area shape="rect" coords="83, 81, 143, 127" href="https://kyynk.github.io/110590034/lab02">
+    </map>
+</body>
+
+</html>
