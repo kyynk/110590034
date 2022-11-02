@@ -1,0 +1,59 @@
+<!-- HTML Lab Assignment 5 -->
+<!-- Deadline: 2022-11-09 23:59 -->
+
+<!-- [10%] 1. A Table (3x3 cells) with two different background colors for <th> and <td> -->
+<!-- [20%] 2. Two buttons to control the width of the table (200px, 500 px) -->
+<!-- [20%] 3. Three buttons to control the border with and cell spacing of the table -->
+<!-- [20%] 4. Four buttons to control the background color of the table (will not affect the color of table headings)-->
+<!-- [20%] 5. A reset button to reset the style to the original.-->
+<!-- [10%] 6. Separate the JavaScript code from the html file and upload both files to github. (javascript in an external file) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Write your Html code here -->
+    <script src="./script.js"></script>
+    <table id="myTable" border="1">
+    <thead>
+    <tr>
+        <th bgcolor="#3C4048"><font color="white"><b>Math</b></th>
+        <th bgcolor="#3C4048"><font color="white"><b>English</b></th>
+        <th bgcolor="#3C4048"><font color="white"><b>Programming</b></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>90</td>
+        <td>60</td>
+        <td>80</td>
+    </tr>
+    <tr>
+        <td>80</td>
+        <td>86</td>
+        <td>98</td>
+    </tr>
+    </tbody>
+    </table>
+    <br />
+    <h3>Change The Table Width</h3>
+    <button onclick="chgWidth1()">200px</button>
+    <button onclick="chgWidth2()">500px</button>
+    <h3>Change The Table Border and the Spacing Width</h3>
+    <button onclick="chgBorder1()">1px</button>
+    <button onclick="chgBorder2()">10px</button>
+    <button onclick="chgBorder3()">20px</button>
+    <h3>Change The Table Color</h3>
+    <button onclick="chgColor1()" style="background-color: green"></button>
+    <button onclick="chgColor2()" style="background-color: blue"></button>
+    <button onclick="chgColor3()" style="background-color: pink"></button>
+    <button onclick="chgColor4()" style="background-color: orange"></button>
+    <br />
+    <button onclick="window.location.reload();">reset</button>
+</body>
+
+</html>
