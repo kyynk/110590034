@@ -1,0 +1,31 @@
+body {
+    background-color: #3C4048;
+    text-align: center;
+}
+h1 {
+    color: white;
+}
+p {
+    color: white;
+}
+canvas {
+    border: solid .2em #fff;
+    background-color: #cccccc;
+    /* height: 90vh; */
+}
+
+/* .grid {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #cccccc;
+}
+.grid div{
+    height: 20px;
+    width: 20px;
+
+}
+.tetromino{
+    background-color: blue;
+} */
